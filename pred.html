@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pregnancy Risk Assessment</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #007bff;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .message {
+            font-size: 18px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .high-risk {
+            background-color: #ff9999;
+        }
+
+        .mid-risk {
+            background-color: #ffff99;
+        }
+
+        .low-risk {
+            background-color: #99ff99;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pregnancy Risk Assessment</h1>
+    <center>
+        {% if data == 0 %}
+        <div class="message high-risk">
+            <h2>High Risk</h2>
+            <p>Dear,<br>
+We have identified that your pregnancy is classified as high-risk, which means we need to take extra precautions to ensure both your health and your baby's well-being. Please be advised to:<br>
+ - Attend all prenatal appointments as scheduled for close monitoring and management of any potential complications.<br>
+ - Avoid strenuous physical activities and prioritize rest and relaxation.<br>
+ - Follow the prescribed medication regimen diligently and refrain from self-medication.<br>
+ - Steer clear of alcohol, tobacco, and recreational drugs as they can pose serious risks to you and your baby.<br>
+ - Maintain a well-balanced diet rich in fruits, vegetables, lean proteins, and whole grains to support optimal fetal development.<br>
+ - Stay vigilant for any warning signs such as vaginal bleeding, severe abdominal pain, or sudden swelling, and report them immediately.<br>
+ Your health and the health of your baby are our top priorities. Please don't hesitate to reach out if you have any concerns or questions.<br>
+ Best regards,<br>
+ Vinay Gaikwad & Team</p>
+        </div>
+        {% elif data == 1 %}
+        <div class="message mid-risk">
+            <h2>Mid Risk</h2>
+            <p>Dear,<br>
+                Your pregnancy has been classified as mid-risk, indicating the need for heightened awareness and attention throughout this journey. Here are some important steps to ensure a healthy pregnancy:<br>
+                - Keep up with your regular prenatal visits to monitor your baby's growth and your overall health.<br>
+                - Incorporate nutritious foods into your diet, including plenty of fruits, vegetables, whole grains, and lean proteins.<br>
+                - Engage in moderate physical activity as recommended by your healthcare provider to maintain fitness and alleviate discomfort.<br>
+                - Stay informed about signs of preterm labor or other pregnancy-related complications and promptly report any concerns to your healthcare team.<br>
+                - Take time for self-care and relaxation to manage stress and promote emotional well-being.<br>
+                - Reach out to your healthcare provider if you experience any unusual symptoms or changes in your pregnancy.<br>
+                 Your commitment to your health and your baby's well-being is crucial during this time. We're here to support you every step of the way.<br>
+                 Warm regards,<br>
+                 Vinay Gaikwad & Team</p>
+        </div>
+        {% else %}
+        <div class="message low-risk">
+            <h2>Low Risk</h2>
+            <p>Dear,<br>
+                 Congratulations!<br>Your pregnancy has been classified as low-risk, which is wonderful news. Here are some tips to help you maintain a healthy and comfortable pregnancy:<br>
+                 - Continue attending your regular prenatal appointments to ensure your baby's growth and development are on track.<br>
+                 - Eat a balanced diet consisting of a variety of nutrient-rich foods to support your baby's growth and your own well-being.<br>
+                 - Stay active with gentle exercises like walking, swimming, or prenatal yoga, as approved by your healthcare provider.<br>
+                 - Educate yourself about childbirth and newborn care through prenatal classes and discussions with your healthcare team.<br>
+                 - Take time for self-care and relaxation to enjoy this special time and alleviate stress.<br>
+                 - Reach out to your healthcare provider if you have any questions or concerns during your pregnancy journey.<br>
+                 We're thrilled to be part of your pregnancy journey and are here to support you in any way we can.<br>
+                 Warmest wishes,<br>
+                 Vinay Gaikwad & Team</p>
+        </div>
+        {% endif %}
+        <a class="btn" href="/">Go back to home page</a>
+    </center>
+</body>
+</html>
+
+
+
